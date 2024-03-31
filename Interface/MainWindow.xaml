@@ -1,0 +1,36 @@
+﻿<Window x:Class="Interface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interface"
+        mc:Ignorable="d"
+         Title="Числа" Height="420" Width="788">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="173*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Выберете задачу, которую хотите решить:" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
+        <ComboBox x:Name ="SelectTask"  HorizontalAlignment="Center" Height="25" Margin="0,1,0,0" VerticalAlignment="Top" Width="526" FontFamily="Rage Italic" FontSize="20" Grid.Row="1">
+            <ComboBoxItem Content="Нахождение всех делителей заданного числа" IsSelected="True"/>
+            <ComboBoxItem Content="Факторизация"/>
+            <ComboBoxItem Content="Нахождение всех простых чисел в заданном диапазоне"/>
+            <ComboBoxItem Content="Найти НОД и НОК"/>
+            <ComboBoxItem Content="Факторизация больших чисел"/>
+            <ComboBoxItem Content="Задача на тему делителей"/>
+        </ComboBox>
+        <Button x:Name ="Description" Height="76" Margin="43,229,635,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" Click="Description_Click" Grid.Row="1">
+            <StackPanel>
+                <TextBlock Text = "Описание" HorizontalAlignment="Center"/>
+                <TextBlock Text = "задачи" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name ="ActivateTask"  Height="76" Margin="635,229,43,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" Grid.Row="1" Click="ActivateTask_Click">
+            <StackPanel>
+                <TextBlock Text = "Вызвать" HorizontalAlignment="Center"/>
+                <TextBlock Text = "решение" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
