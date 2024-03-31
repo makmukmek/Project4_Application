@@ -55,6 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Help1.xaml.cs">
+      <DependentUpon>Help1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help2.xaml.cs">
+      <DependentUpon>Help2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help3.xaml.cs">
+      <DependentUpon>Help3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help4.xaml.cs">
+      <DependentUpon>Help4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help5.xaml.cs">
+      <DependentUpon>Help5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help6.xaml.cs">
+      <DependentUpon>Help6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Task1.xaml.cs">
       <DependentUpon>Task1.xaml</DependentUpon>
     </Compile>
@@ -73,6 +91,30 @@
     <Compile Include="Task6.xaml.cs">
       <DependentUpon>Task6.xaml</DependentUpon>
     </Compile>
+    <Page Include="Help1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

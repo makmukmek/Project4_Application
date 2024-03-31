@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Найти НОД и НОК" Height="350" Width="700">
+        Title="Найти НОД и НОК." Height="350" Width="700">
     <Grid>
         <Label Content="Найти НОД и НОК" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
     </Grid>

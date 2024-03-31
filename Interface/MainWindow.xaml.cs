@@ -35,28 +35,46 @@ namespace Interface
                 switch (selectedTask)
                 {
                     case "Нахождение всех делителей заданного числа":
-                        Window Help1 = new Window();
-                        Help1.Show();
+                        Help1 help1 = new Help1
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help1.Show();
                         break;
                     case "Факторизация":
-                        Window Help2 = new Window();
-                        Help2.Show();
+                        Help2 help2 = new Help2
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help2.Show();
                         break;
                     case "Нахождение всех простых чисел в заданном диапазоне":
-                        Window Help3 = new Window();
-                        Help3.Show();
+                        Help3 help3 = new Help3
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help3.Show();
                         break;
                     case "Найти НОД и НОК":
-                        Window Help4 = new Window();
-                        Help4.Show();
+                        Help4 help4 = new Help4
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help4.Show();
                         break;
                     case "Факторизация больших чисел":
-                        Window Help5 = new Window();
-                        Help5.Show();
+                        Help5 help5 = new Help5
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help5.Show();
                         break;
                     case "Задача на тему делителей":
-                        Window Help6 = new Window();
-                        Help6.Show();
+                        Help6 help6 = new Help6
+                        {
+                            WindowStartupLocation = WindowStartupLocation.CenterScreen
+                        };
+                        help6.Show();
                         break;
                     default:
                         break;

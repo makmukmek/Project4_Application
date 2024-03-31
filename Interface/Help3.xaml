@@ -1,11 +1,11 @@
-﻿<Window x:Class="Interface.Task3"
+﻿<Window x:Class="Interface.Help3"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Нахождение всех простых чисел в заданном диапазоне." Height="350" Width="700">
+        Title="Нахождение всех простых чисел в заданном диапазоне. Справка." Height="450" Width="800">
     <Grid>
         <Label Content="Нахождение всех простых чисел в заданном диапазоне" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
     </Grid>

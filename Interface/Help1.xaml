@@ -1,11 +1,11 @@
-﻿<Window x:Class="Interface.Task1"
+﻿<Window x:Class="Interface.Help1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-       Title="Нахождение всех делителей заданного числа." Height="350" Width="700">
+        Title="Нахождение всех делителей заданного числа. Справка."  Height="450" Width="800">
     <Grid>
         <Label Content="Нахождение всех делителей заданного числа" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
     </Grid>
