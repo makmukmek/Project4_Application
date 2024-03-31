@@ -178,5 +178,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-6-8068286.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-1-8068013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-2-8068070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-3-8068125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-4-8068178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-number-5-8068231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="helpbutton_85772.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

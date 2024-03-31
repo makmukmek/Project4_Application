@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Нахождение всех делителей заданного числа. Справка."  Height="450" Width="800">
+        Title="Нахождение всех делителей заданного числа. Справка."  Height="450" Width="800" Icon="/helpbutton_85772.png">
     <Grid>
-        <Label Content="Нахождение всех делителей заданного числа" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="282*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Нахождение всех делителей заданного числа" Height="32" Margin="57,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Left" Grid.Column="1"/>
     </Grid>
 </Window>
