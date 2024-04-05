@@ -4,6 +4,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Library
 {
@@ -14,7 +15,7 @@ namespace Library
         /// </summary>
         /// <param name="N">Входное число</param>
         /// <returns>True, если число простое / False, если непростое</returns>
-        private static bool isPrime(int N)
+        private static bool IsPrime(int N)
         {
             //2 - наименьшее простое число => начинаем цикл с i = 2.
             //По алгоритму "Решето Эратосфена" мы можем проитерировать цикл
@@ -26,7 +27,22 @@ namespace Library
                     return false;
             }
             return true;
+        }
 
+        /// <summary>
+        /// Функция возвращает строку со всеми делителями числа N, записанными через пробел
+        /// </summary>
+        /// <param name="N">Входное число</param>
+        /// <returns>Строка делителей</returns>
+        public static string Divisors(int N)
+        {
+            //Результирующая строка, в которую будем записывать числа
+            string line = "";
+
+            //Перебрав все элементы списка, прибавляем их к строке
+            foreach (int elem in _Divisors(N))
+                line += elem.ToString() + " ";
+            return line;
         }
 
         /// <summary>
@@ -34,7 +50,7 @@ namespace Library
         /// </summary>
         /// <param name="N">Входное число</param>
         /// <returns>Список делителей</returns>
-        public static List<int> Divisors(int N)
+        private static List<int> _Divisors(int N)
         {
             //Список, в который мы будем добавлять делители числа N
             List<int> divisors = new List<int>();
@@ -51,11 +67,28 @@ namespace Library
         }
 
         /// <summary>
+        /// Функция возвращает строку, состоящую из простых чисел на которые
+        /// можно разделить число N
+        /// </summary>
+        /// <param name="N">Входное число</param>
+        /// <returns>Строка чисел</returns>
+        public static string Factorization(int N)
+        {
+            //Результирующая строка, в которую будем записывать числа
+            string line = "";
+
+            //Перебрав все элементы списка, прибавляем их к строке
+            foreach (int elem in _Factorization(N))
+                line += elem.ToString() + " ";
+            return line;
+        }
+
+        /// <summary>
         /// Функция возвращает список простых чисел, на которые можно разложить число N
         /// </summary>
         /// <param name="N">Входное число</param>
         /// <returns>Список чисел</returns>
-        public static List<int> Factorization(int N) 
+        private static List<int> _Factorization(int N) 
         {
             //Список, в который мы будем добавлять простые числа, составляющие N
             List<int> listOfPrimes = new List<int>();
@@ -74,11 +107,28 @@ namespace Library
         }
 
         /// <summary>
-        /// Функция возвращает список простых делителей в диапазоне от 2 до N
+        /// Функция возвращает строку со всеми простыми числами 
+        /// в диапазоне от 2 до N
         /// </summary>
         /// <param name="N">Входное число</param>
-        /// <returns>Список простых делителей</returns>
-        public static List<int> PrimeDivisors(int N)
+        /// <returns>Строка простых чисел</returns>
+        public static string PrimeDivisors(int N)
+        {
+            //Результирующая строка, в которую будем записывать числа
+            string line = "";
+
+            //Перебрав все элементы списка, прибавляем их к строке
+            foreach (int elem in _PrimeDivisors(N))
+                line += elem.ToString() + " ";
+            return line;
+        }
+
+        /// <summary>
+        /// Функция возвращает список простых чисел в диапазоне от 2 до N
+        /// </summary>
+        /// <param name="N">Входное число</param>
+        /// <returns>Список простых чисел</returns>
+        private static List<int> _PrimeDivisors(int N)
         {
             //Список, в который мы будем добавлять простые числа
             List<int> primeDivisors = new List<int>();
@@ -86,7 +136,7 @@ namespace Library
             for (int i = 2; i < N + 1; i++)
             {
                 //Если число простое, то добавляем его в список
-                if (isPrime(i))
+                if (IsPrime(i))
                 {
                     primeDivisors.Add(i);
                 }
