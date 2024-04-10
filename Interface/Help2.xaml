@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="Факторизация. Справка" Height="450" Width="800" Icon="/helpbutton_85772.png">
     <Grid>
+        
         <Label Content="Факторизация" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
+        <TextBlock TextWrapping="Wrap" FontSize="19" HorizontalAlignment="Left" Margin="68,74,0,0" VerticalAlignment="Top" Height="238" Width="658" Grid.ColumnSpan="3">
+    Факторизация числа - это процесс нахождения всех простых множителей, на которые заданное число делится без остатка.
+    Она является важной операцией в математике и алгоритмике для решения различных задач.
+    Процесс факторизации включает в себя пошаговое деление заданного числа на все простые числа,
+    начиная с наименьшего и до квадратного корня из заданного числа.
+    Если число делится на какое-либо простое число без остатка, оно добавляется в список множителей.
+    После завершения процесса факторизации возвращается список всех простых множителей,
+    на которые делится заданное число.
+        </TextBlock>
+
+        <Button Content="Закрыть" Click="CloseButton_Click" Grid.Column="1" HorizontalAlignment="Center" Margin="0,317,0,0" VerticalAlignment="Top" Height="99" Width="203" FontSize="20"/>
+
     </Grid>
 </Window>

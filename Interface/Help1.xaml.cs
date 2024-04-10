@@ -23,5 +23,11 @@ namespace Interface
         {
             InitializeComponent();
         }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Закрываем текущее окно
+            this.Close();
+        }
+
     }
 }
