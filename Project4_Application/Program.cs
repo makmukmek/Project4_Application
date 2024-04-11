@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Library;
+using System.Numerics;
 
 namespace Project4_Application
 {
@@ -15,7 +16,7 @@ namespace Project4_Application
             Console.WriteLine(Library.NumberLib.Divisors(12));
             Console.WriteLine();
 
-            Console.WriteLine(Library.NumberLib.Factorization(12));
+            Console.WriteLine(Library.NumberLib.Factorization(15));
             Console.WriteLine();
 
             Console.WriteLine(Library.NumberLib.PrimeDivisors(15));
@@ -25,6 +26,9 @@ namespace Project4_Application
             Console.WriteLine();
 
             Console.WriteLine(Library.NumberLib.NOK(35, 15));
+            Console.WriteLine();
+
+            Console.WriteLine(Library.NumberLib.Problem(1, 100000, 9));
             Console.WriteLine();
         }
     }

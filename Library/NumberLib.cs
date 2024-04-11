@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
+using System.Numerics;
+using System.Collections.Specialized;
+using System.Data.SqlTypes;
+using System.Runtime.InteropServices;
 
 namespace Library
 {
@@ -76,10 +78,24 @@ namespace Library
         {
             //Результирующая строка, в которую будем записывать числа
             string line = "";
+            int counter = 1;
 
-            //Перебрав все элементы списка, прибавляем их к строке
-            foreach (int elem in _Factorization(N))
-                line += elem.ToString() + " ";
+            //Формируем форматированную строку вида 2^2 * 3^1 (12)
+            List<int> fact = _Factorization(N);
+            for (int i = 1; i < fact.Count; i++)
+            {
+                //Если предыдущее число было равно следующему, то счётчик увеличивается
+                if (fact[i - 1] == fact[i])
+                    counter++;
+                //В ином случае добавляем в выходную строку информацию и сбрасываем счётчик
+                else
+                {
+                    line += fact[i - 1].ToString() + "^" + counter.ToString() + " * ";
+                    counter = 1;
+                }
+            }
+            //Добавляем к строке последнюю группу множителей
+            line += fact[fact.Count - 1].ToString() + "^" + counter.ToString();
             return line;
         }
 
@@ -88,7 +104,7 @@ namespace Library
         /// </summary>
         /// <param name="N">Входное число</param>
         /// <returns>Список чисел</returns>
-        private static List<int> _Factorization(int N) 
+        private static List<int> _Factorization(int N)
         {
             //Список, в который мы будем добавлять простые числа, составляющие N
             List<int> listOfPrimes = new List<int>();
@@ -176,6 +192,48 @@ namespace Library
         {
             //НОК равен произведению чисел N и M, разделённому на из НОД
             return (N * M) / NOD(N, M);
+        }
+
+        /// <summary>
+        /// Функция возвращает строку с максимальными делителями чисел в заданном
+        /// интервале не считая самих чисел, количество которых равно условию
+        /// </summary>
+        /// <param name="start">Начальная граница интервала</param>
+        /// <param name="end">Конечная граница интервала</param>
+        /// <param name="condition">Условие</param>
+        /// <returns>Строка делителй</returns>
+        public static string Problem(int start, int end, int condition) 
+        {
+            string line = "";
+
+            foreach (int elem in _Problem(start, end, condition))
+                line += elem.ToString() + " ";
+
+            return line;
+        }
+
+        /// <summary>
+        /// Задача: В заданном интервале найти все числа, у которых количество
+        ///делителей равно условию.Вывести максимальные делители не считая самого числа.
+        /// </summary>
+        /// <param name="start">Начальная граница интервала</param>
+        /// <param name="end">Конечная граница интервала</param>
+        /// <param name="condition">Условие</param>
+        /// <returns>Список делителей</returns>
+        private static List<int> _Problem(int start, int end, int condition) 
+        {
+            List<int> numbers = new List<int>();
+
+            //Проходим по всему интервалу, включая end
+            for (int i = start; i < end + 1; i++)
+            {
+                List<int> div = _Divisors(i);
+
+                //Если количество делителей равно условию, то добавляем наибольший в список
+                if (div.Count == condition)
+                    numbers.Add(div[div.Count - 2]);
+            }
+            return numbers;
         }
     }
 }
