@@ -30,6 +30,7 @@ namespace Tests
                     "\n9. Выход из меню тестирования." +
                     "\n\nВведите номер действия (1 .. 9): ");
                 sw = Console.ReadLine();
+                
                 switch (sw)
                 {
                     case "1":
@@ -247,26 +248,26 @@ namespace Tests
 
             Console.WriteLine("\nНахождение НОД");
             var NODArr = new string[20][];
-            NODArr[0] =
-            NODArr[1] =
-            NODArr[2] =
-            NODArr[3] =
-            NODArr[4] =
-            NODArr[5] =
-            NODArr[6] =
-            NODArr[7] =
-            NODArr[8] =
-            NODArr[9] =
-            NODArr[10] =
-            NODArr[11] =
-            NODArr[12] =
-            NODArr[13] =
-            NODArr[14] =
-            NODArr[15] =
-            NODArr[16] =
-            NODArr[17] =
-            NODArr[18] =
-            NODArr[19] = new string[] { "0", "0", " " };
+            NODArr[0] = new string[] { "1", "8", "1" };
+            NODArr[1] = new string[] { "2", "2", "2" };
+            NODArr[2] = new string[] { "7", "5", "1" };
+            NODArr[3] = new string[] { "13", "26", "13" };
+            NODArr[4] = new string[] { "11", "12", "1" };
+            NODArr[5] = new string[] { "36", "42", "6" };
+            NODArr[6] = new string[] { "7", "77", "7" };
+            NODArr[7] = new string[] { "130", "443", "1" };
+            NODArr[8] = new string[] { "255", "10", "5" };
+            NODArr[9] = new string[] { "810", "633", "3" };
+            NODArr[10] = new string[] { "1024", "1024", "1024" };
+            NODArr[11] = new string[] { "2013", "3000", "3" };
+            NODArr[12] = new string[] { "8018", "466", "2" };
+            NODArr[13] = new string[] { "9000", "60000", "3000" };
+            NODArr[14] = new string[] { "23566", "14500", "2" };
+            NODArr[15] = new string[] { "100107", "6666", "3" };
+            NODArr[16] = new string[] { "239987", "789332", "1" };
+            NODArr[17] = new string[] { "1000000", "6000000", "1000000" };
+            NODArr[18] = new string[] { "987654", "4567890", "6" };
+            NODArr[19] = new string[] { "2100000", "333333", "21" };
 
             foreach (var test in NODArr)
             {
@@ -302,27 +303,27 @@ namespace Tests
             int count = 0;
 
             Console.WriteLine("\nНахождение НОД");
-            var NOKArr = new string[20][];
-            NOKArr[0] =
-            NOKArr[1] =
-            NOKArr[2] =
-            NOKArr[3] =
-            NOKArr[4] =
-            NOKArr[5] =
-            NOKArr[6] =
-            NOKArr[7] =
-            NOKArr[8] =
-            NOKArr[9] =
-            NOKArr[10] =
-            NOKArr[11] =
-            NOKArr[12] =
-            NOKArr[13] =
-            NOKArr[14] =
-            NOKArr[15] =
-            NOKArr[16] =
-            NOKArr[17] =
-            NOKArr[18] =
-            NOKArr[19] = new string[] { "0", "0", " " };
+            var NOKArr = new string[20][]; 
+            NOKArr[0] = new string[] { "1", "8", "8" };
+            NOKArr[1] = new string[] { "2", "2", "2" };
+            NOKArr[2] = new string[] { "7", "5", "35" };
+            NOKArr[3] = new string[] { "13", "26", "26" };
+            NOKArr[4] = new string[] { "11", "12", "132" };
+            NOKArr[5] = new string[] { "36", "42", "252" };
+            NOKArr[6] = new string[] { "7", "77", "77" };
+            NOKArr[7] = new string[] { "130", "443", "57590" };
+            NOKArr[8] = new string[] { "255", "10", "510" };
+            NOKArr[9] = new string[] { "810", "633", "170910" };
+            NOKArr[10] = new string[] { "1024", "1024", "1024" };
+            NOKArr[11] = new string[] { "2013", "3000", "2013000" };
+            NOKArr[12] = new string[] { "8018", "466", "1868194" };
+            NOKArr[13] = new string[] { "9000", "60000", "180000" };
+            NOKArr[14] = new string[] { "23566", "14500", "170853500" };
+            NOKArr[15] = new string[] { "100107", "6666", "222437754" };
+            NOKArr[16] = new string[] { "2399", "7893", "18935307" };
+            NOKArr[17] = new string[] { "1000000", "6000000", "6000000" };
+            NOKArr[18] = new string[] { "98765", "45680", "902317040" };
+            NOKArr[19] = new string[] { "21000", "3333", "23331000" };
 
             foreach (var test in NOKArr)
             {
@@ -358,10 +359,8 @@ namespace Tests
             DividersTest();
             FactorizationTest();
             PrimeDivisorsTest();
-            //NODTest();
-            //NOKTest();
-
-
+            NODTest();
+            NOKTest();
 
 
             if (incorrectMethods == "")
