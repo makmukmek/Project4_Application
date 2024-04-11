@@ -48,5 +48,6 @@ namespace Interface
             NumberForPrimeDivisors.Text = string.Empty;
             ResPrimeDivisors.Document.Blocks.Clear();
         }
+
     }
 }
