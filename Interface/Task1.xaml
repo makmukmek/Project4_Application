@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Нахождение всех делителей заданного числа" Height="37" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
         <Label Content="Введите число:" Height="42" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="180"/>
-        <Label Content="Делители:" Height="42" Margin="50,125,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="180"/>
+        <Label Content="Делители:" Height="42" Margin="50,125,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="129"/>
         <TextBox x:Name="NumberForDivisors" HorizontalAlignment="Left" Height="42" Margin="251,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3"/>
         <RichTextBox x:Name="ResDivisors" Margin="179,125,50,0" FontSize="24" FontStyle="Italic" Height="179" VerticalAlignment="Top" IsReadOnly="True" BorderThickness="3,3,3,3" VerticalScrollBarVisibility="Auto"/>
 
