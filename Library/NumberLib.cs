@@ -123,6 +123,59 @@ namespace Library
         }
 
         /// <summary>
+        /// Тот же метод факторизации, но сделанный для больших целых чисел (BigInteger)
+        /// </summary>
+        /// <param name="N">Входное число</param>
+        /// <returns>Строка чисел</returns>
+        public static string BigIntFactorization(BigInteger N)
+        {
+            //Результирующая строка, в которую будем записывать числа
+            string line = "";
+            int counter = 1;
+
+            //Формируем форматированную строку вида 2^2 * 3^1 (12)
+            List<BigInteger> fact = _BigIntFactorization(N);
+            for (int i = 1; i < fact.Count; i++)
+            {
+                //Если предыдущее число было равно следующему, то счётчик увеличивается
+                if (fact[i - 1] == fact[i])
+                    counter++;
+                //В ином случае добавляем в выходную строку информацию и сбрасываем счётчик
+                else
+                {
+                    line += fact[i - 1].ToString() + "^" + counter.ToString() + " * ";
+                    counter = 1;
+                }
+            }
+            //Добавляем к строке последнюю группу множителей
+            line += fact[fact.Count - 1].ToString() + "^" + counter.ToString();
+            return line;
+        }
+
+        /// <summary>
+        /// Тот же метод факторизации, но сделанный для больших целых чисел (BigInteger)
+        /// </summary>
+        /// <param name="N">Входное число</param>
+        /// <returns>Список чисел</returns>
+        private static List<BigInteger> _BigIntFactorization(BigInteger N)
+        {
+            //Список, в который мы будем добавлять простые числа, составляющие N
+            List<BigInteger> listOfPrimes = new List<BigInteger>();
+
+            //2 - наименьшее простое число => начинаем цикл с i = 2
+            for (BigInteger i = 2; i < N + 1; i++)
+            {
+                //Добавляем все одинаковые простые числа в список
+                while (N % i == 0 && N != 1)
+                {
+                    listOfPrimes.Add(i);
+                    N /= i;
+                }
+            }
+            return listOfPrimes;
+        }
+
+        /// <summary>
         /// Функция возвращает строку со всеми простыми числами 
         /// в диапазоне от 2 до N
         /// </summary>

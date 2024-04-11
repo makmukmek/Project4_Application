@@ -16,7 +16,10 @@ namespace Project4_Application
             Console.WriteLine(Library.NumberLib.Divisors(12));
             Console.WriteLine();
 
-            Console.WriteLine(Library.NumberLib.Factorization(15));
+            Console.WriteLine(Library.NumberLib.Factorization(98340922));
+            Console.WriteLine();
+
+            Console.WriteLine(Library.NumberLib.BigIntFactorization(563453241435));
             Console.WriteLine();
 
             Console.WriteLine(Library.NumberLib.PrimeDivisors(15));
@@ -28,7 +31,7 @@ namespace Project4_Application
             Console.WriteLine(Library.NumberLib.NOK(35, 15));
             Console.WriteLine();
 
-            Console.WriteLine(Library.NumberLib.Problem(1, 100000, 9));
+            Console.WriteLine(Library.NumberLib.Problem(1, 1000, 9));
             Console.WriteLine();
         }
     }
