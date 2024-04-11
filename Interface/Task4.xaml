@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Найти НОД и НОК." Height="350" Width="700" Icon="/free-icon-number-4-8068178.png">
+        Title="Найти НОД и НОК." Height="450" Width="700" Icon="/free-icon-number-4-8068178.png">
     <Grid>
-        <Label Content="Найти НОД и НОК" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
+        <Label Content="Найти НОД и НОК" Height="42" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Label Content="Введите первое число:" Height="42" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="268"/>
+        <Label Content="Введите второе число:" Height="42" Margin="50,126,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="274"/>
+        <TextBox x:Name="FirstNumber" HorizontalAlignment="Left" Height="42" Margin="329,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3"/>
+        <Button x:Name="RunNokNod" Content="Выполнить" Margin="0,0,50,29" FontSize="24" FontStyle="Italic" Click="RunNokNod_Click" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="176"/>
+        <Button x:Name="Clear" Content="Очистить" HorizontalAlignment="Left" Margin="50,0,0,29" Width="176" FontSize="24" FontStyle="Italic" Click="Clear_Click" Height="60" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="SecondNumber" HorizontalAlignment="Left" Height="42" Margin="329,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3"/>
+        <Label Content="НОД равен:" Height="42" Margin="50,186,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="137"/>
+        <Label Content="НОК равен:" Height="42" Margin="50,244,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="137" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="NOD" HorizontalAlignment="Left" Height="42" Margin="192,186,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3" IsReadOnly="True"/>
+        <TextBox x:Name="NOK" HorizontalAlignment="Left" Height="42" Margin="192,244,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3" IsReadOnly="True"/>
     </Grid>
 </Window>
