@@ -199,5 +199,11 @@
   <ItemGroup>
     <Resource Include="helpbutton_85772.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{4fbfd8d0-9272-4a14-954e-9f5dde4d6a0b}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

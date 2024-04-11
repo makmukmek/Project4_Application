@@ -6,22 +6,18 @@
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
         Title="Нахождение всех делителей заданного числа. Справка."  Height="450" Width="800" Icon="/helpbutton_85772.png">
-  <Grid>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="65*"/>
-      <ColumnDefinition Width="282*"/>
-      <ColumnDefinition Width="53*"/>
-    </Grid.ColumnDefinitions>
+    <Grid>
 
-    <Label Content="Нахождение всех делителей заданного числа" Height="32" Margin="57,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Left" Grid.Column="1"/>
-    <TextBlock TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Left" Margin="68,74,0,0" VerticalAlignment="Top" Height="238" Width="658" Grid.ColumnSpan="3">
+
+        <Label Content="Нахождение всех делителей заданного числа" Height="37" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <TextBlock TextWrapping="Wrap" FontSize="24" Margin="48,52,48,0" VerticalAlignment="Top" Height="297" FontStyle="Italic">
     Этот метод находит все числа, на которые заданное число делится без остатка.
     Он принимает один параметр - целое число number, для которого нужно найти делители.
     Метод итерируется по всем числам от 1 до корня из (number), проверяя каждое число на делимость с заданным числом.
     Если число делится без остатка, оно добавляется в массив делителей.
     В результате работы метода возвращается массив, содержащий все делители указанного числа.
-    </TextBlock>
+        </TextBlock>
 
-    <Button Content="Закрыть" Click="CloseButton_Click" Grid.Column="1" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" Height="99" Width="204" FontSize="20"/>
-  </Grid>
+        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,349,0,10" Width="204" FontSize="24" FontFamily="Rage Italic"/>
+    </Grid>
 </Window>

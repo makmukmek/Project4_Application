@@ -7,6 +7,7 @@
         mc:Ignorable="d"
        Title="Нахождение всех делителей заданного числа." Height="350" Width="700" Icon="/free-icon-number-1-8068013.png">
     <Grid>
-        <Label Content="Нахождение всех делителей заданного числа" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
+        <Label Content="Нахождение всех делителей заданного числа" Height="42" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Label Content="Нахождение всех делителей заданного числа" Height="42" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="180"/>
     </Grid>
 </Window>

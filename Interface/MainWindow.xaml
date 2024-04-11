@@ -11,8 +11,8 @@
             <RowDefinition Height="29*"/>
             <RowDefinition Height="173*"/>
         </Grid.RowDefinitions>
-        <Label Content="Выберете задачу, которую хотите решить:" Height="32" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" HorizontalAlignment="Center"/>
-        <ComboBox x:Name ="SelectTask"  HorizontalAlignment="Center" Height="25" Margin="0,1,0,0" VerticalAlignment="Top" Width="526" FontFamily="Rage Italic" FontSize="20" Grid.Row="1">
+        <Label Content="Выберете задачу, которую хотите решить:" Height="38" VerticalAlignment="Center" FontFamily="Rage Italic" FontSize="24" HorizontalAlignment="Center"/>
+        <ComboBox x:Name ="SelectTask"  HorizontalAlignment="Center" Height="32" Margin="0,1,0,0" VerticalAlignment="Top" Width="656" FontFamily="Rage Italic" FontSize="24" Grid.Row="1">
             <ComboBoxItem Content="Нахождение всех делителей заданного числа" IsSelected="True"/>
             <ComboBoxItem Content="Факторизация"/>
             <ComboBoxItem Content="Нахождение всех простых чисел в заданном диапазоне"/>
@@ -20,13 +20,13 @@
             <ComboBoxItem Content="Факторизация больших чисел"/>
             <ComboBoxItem Content="Задача на тему делителей"/>
         </ComboBox>
-        <Button x:Name ="Description" Height="76" Margin="43,229,635,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" Click="Description_Click" Grid.Row="1">
+        <Button x:Name ="Description" Height="76" Margin="43,229,605,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="24" Click="Description_Click" Grid.Row="1">
             <StackPanel>
                 <TextBlock Text = "Описание" HorizontalAlignment="Center"/>
                 <TextBlock Text = "задачи" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button x:Name ="ActivateTask"  Height="76" Margin="635,229,43,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="20" Grid.Row="1" Click="ActivateTask_Click">
+        <Button x:Name ="ActivateTask"  Height="76" Margin="605,229,43,0" VerticalAlignment="Top" FontFamily="Rage Italic" FontSize="24" Grid.Row="1" Click="ActivateTask_Click">
             <StackPanel>
                 <TextBlock Text = "Вызвать" HorizontalAlignment="Center"/>
                 <TextBlock Text = "решение" HorizontalAlignment="Center"/>
