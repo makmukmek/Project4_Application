@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Numerics;
+using System.Threading;
 
 namespace Interface
 {
@@ -29,6 +30,8 @@ namespace Interface
         private void RunBigIntFactorization_Click(object sender, RoutedEventArgs e)
         {
             ResBigIntFactorization.Document.Blocks.Clear();
+            int timeLimitInSeconds = 20; 
+            Timer timer = new Timer(TimerCallback, null, timeLimitInSeconds * 1000, Timeout.Infinite);
             BigInteger number;
             try
             {
@@ -36,15 +39,26 @@ namespace Interface
                 {
                     throw new Exception("Введите целое положительное число. Пример ввода: 1 23 521");
                 }
+
                 ResBigIntFactorization.AppendText(NumberLib.BigIntFactorization(BigInteger.Parse(NumberForBigIntFactorization.Text)));
+            }
+            catch (TimeoutException)
+            {
+                MessageBox.Show("Превышено время выполнения программы!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                NumberForBigIntFactorization.Text = string.Empty;
+                ResBigIntFactorization.Document.Blocks.Clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 NumberForBigIntFactorization.Text = string.Empty;
             }
+            timer.Dispose();
         }
-
+        static void TimerCallback(object state)
+        {
+            throw new TimeoutException();
+        }
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
             NumberForBigIntFactorization.Text = string.Empty;
