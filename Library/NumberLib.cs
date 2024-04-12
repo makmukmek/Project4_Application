@@ -44,6 +44,10 @@ namespace Library
             //Перебрав все элементы списка, прибавляем их к строке
             foreach (int elem in _Divisors(N))
                 line += elem.ToString() + " ";
+
+            if (line.Length == 0)
+                line = "Таких чисел нет";
+
             return line;
         }
 
@@ -96,6 +100,10 @@ namespace Library
             }
             //Добавляем к строке последнюю группу множителей
             line += fact[fact.Count - 1].ToString() + "^" + counter.ToString();
+
+            if (line.Length == 0)
+                line = "Таких чисел нет";
+
             return line;
         }
 
@@ -149,6 +157,10 @@ namespace Library
             }
             //Добавляем к строке последнюю группу множителей
             line += fact[fact.Count - 1].ToString() + "^" + counter.ToString();
+
+            if (line.Length == 0)
+                line = "Таких чисел нет";
+
             return line;
         }
 
@@ -189,6 +201,10 @@ namespace Library
             //Перебрав все элементы списка, прибавляем их к строке
             foreach (int elem in _PrimeDivisors(N))
                 line += elem.ToString() + " ";
+
+            if (line.Length == 0)
+                line = "Таких чисел нет";
+
             return line;
         }
 
@@ -261,6 +277,9 @@ namespace Library
 
             foreach (int elem in _Problem(start, end, condition))
                 line += elem.ToString() + " ";
+
+            if (line.Length == 0)
+                line = "Таких чисел нет";
 
             return line;
         }
