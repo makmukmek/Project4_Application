@@ -7,12 +7,15 @@ namespace Tests
     internal class Program
     {
         static string incorrectMethods;
+        static int count;
         static void Main()
         {
             string sw;
+            
             do
             {
                 Console.Clear();
+                count = 0;
                 Console.Write($"ТЕСТИРОВАНИЕ РАБОТЫ ПРОЕКТА 4 \"Числа\"" +
                     "\nВыберите метод для тестирования:" +
                     "\n\n1. Нахождение всех делителей заданного числа." +
@@ -20,8 +23,8 @@ namespace Tests
                     "\n3. Нахождение всех простых чисел в заданном диапазоне." +
                     "\n4. Нахождение НОД." +
                     "\n5. Нахождение НОК." +
-                    "\n6. Нахождение НОД и НОК." +
-                    "\n7. Нахождение НОД и НОК." +
+                    "\n6. Факторизация больших чисел." +
+                    "\n7. Вывод по одному максимальному собственному делителю чисел с указанным кол-вом делителей в указанном интервале." +
                     "\n8. Тестирование всех методов." +
                     "\n9. Выход из меню тестирования." +
                     "\n\nВведите номер действия (1 .. 9): ");
@@ -48,7 +51,7 @@ namespace Tests
                         BigIntFactorizationTest();
                         break;
                     case "7":
-
+                        ProblemTest();
                         break;
                     case "8":
                         FullTest();
@@ -72,7 +75,7 @@ namespace Tests
             string initialNumber;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
             Console.WriteLine("\nНахождение всех делителей заданного числа");
 
@@ -107,20 +110,9 @@ namespace Tests
                 Console.WriteLine($"\nЗаданное число: {initialNumber}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "Dividers\n";
-            }
-            Console.ResetColor();
+            Results("Dividers\n", count1);
         }
 
         static void FactorizationTest()
@@ -128,7 +120,7 @@ namespace Tests
             string initialNumber;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
             Console.WriteLine("\nФакторизация");
 
@@ -163,27 +155,16 @@ namespace Tests
                 Console.WriteLine($"\nЗаданное число: {initialNumber}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "Factorization\n";
-            }
-            Console.ResetColor();
+            Results("Factorization\n", count1);
         }
         static void PrimeDivisorsTest()
         {
             string initialNumber;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
             Console.WriteLine("\nНахождение всех простых чисел в заданном диапазоне");
             
@@ -219,20 +200,9 @@ namespace Tests
                 Console.WriteLine($"\nЗаданное число: {initialNumber}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "PrimeDivisors\n";
-            }
-            Console.ResetColor();
+            Results("PrimeDivisors\n", count1);
         }
         static void NODTest()
         {
@@ -240,7 +210,7 @@ namespace Tests
             string initialNumber2;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
             Console.WriteLine("\nНахождение НОД");
             var NODArr = new string[20][];
@@ -275,28 +245,17 @@ namespace Tests
                 Console.WriteLine($"\nЗаданные числа: {initialNumber1}\t{initialNumber2}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "NOD\n";
-            }
-            Console.ResetColor();
+            Results("NOD\n", count1);
         }
         static void NOKTest()
         {
             string initialNumber1;
             string initialNumber2;
             string ansCorr;
-            string ansLib;
-            int count = 0;
+            string ansLib; 
+            int count1 = 0;
 
             Console.WriteLine("\nНахождение НОK");
             var NOKArr = new string[20][]; 
@@ -331,20 +290,9 @@ namespace Tests
                 Console.WriteLine($"\nЗаданные числа: {initialNumber1}\t{initialNumber2}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "NOK\n";
-            }
-            Console.ResetColor();
+            Results("NOK\n", count1);
         }
 
         static void BigIntFactorizationTest()
@@ -352,7 +300,7 @@ namespace Tests
             string initialNumber;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
             Console.WriteLine("\nФакторизация больших чисел");
 
@@ -387,76 +335,60 @@ namespace Tests
                 Console.WriteLine($"\nЗаданное число: {initialNumber}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "Factorization\n";
-            }
-            Console.ResetColor();
+            Results("BigIntFactorization\n", count1);
         }
 
         static void ProblemTest()
         {
-            string initialNumber;
+            string start;
+            string end;
+            string amountOfDividers;
             string ansCorr;
             string ansLib;
-            int count = 0;
+            int count1 = 0;
 
-            Console.WriteLine("\nФакторизация больших чисел");
+            Console.WriteLine("\nВывод по одному максимальному собственному делителю чисел с указанным кол-вом делителей в указанном интервале.");
 
-            var primeFactorsArr = new string[20][];
-            primeFactorsArr[0] = new string[] { "123456789123456789", "3^2 * 7^1 * 11^1 * 13^1 * 19^1 * 3607^1 * 3803^1 * 52579^1" };
-            primeFactorsArr[1] = new string[] { "35687864325168786", "2^1 * 3^1 * 19^1 * 53^1 * 199^1 * 2381^1 * 12466007^1" };
-            primeFactorsArr[2] = new string[] { "55555555555555555555", "5^1 * 11^1 * 41^1 * 101^1 * 271^1 * 3541^1 * 9091^1 * 27961^1" };
-            primeFactorsArr[3] = new string[] { "62626262616860", "2^2 * 5^1 * 43^2 * 167^1 * 3019^1 * 3359^1" };
-            primeFactorsArr[4] = new string[] { "333333333333", "3^2 * 7^1 * 11^1 * 13^1 * 37^1 * 101^1 * 9901^1" };
-            primeFactorsArr[5] = new string[] { "10000000000000", "2^13 * 5^13" };
-            primeFactorsArr[6] = new string[] { "302030402004", "2^2 * 3^2 * 59^1 * 71^1 * 257^1 * 7793^1" };
-            primeFactorsArr[7] = new string[] { "555555555500", "2^2 * 5^3 * 11^1 * 41^1 * 271^1 * 9091^1" };
-            primeFactorsArr[8] = new string[] { "666666666666", "2^1 * 3^2 * 7^1 * 11^1 * 13^1 * 37^1 * 101^1 * 9901^1" };
-            primeFactorsArr[9] = new string[] { "3300220085685", "3^1 * 5^1 * 64627^1 * 3404377^1" };
-            primeFactorsArr[10] = new string[] { "658300129986", "2^1 * 3^1 * 17^1 * 23^1 * 89^1 * 421^1 * 7489^1" };
-            primeFactorsArr[11] = new string[] { "999999999999001235", "5^1 * 13^1 * 17^1 * 29^1 * 43^1 * 1277^1 * 5381^1 * 105613^1" };
-            primeFactorsArr[12] = new string[] { "7863012222256563125", "5^4 * 13^1 * 29^1 * 1777^1 * 75503^1 * 248723^1" };
-            primeFactorsArr[13] = new string[] { "454545454454523012", "2^2 * 3^1 * 7^1 * 37^1 * 4057^1 * 123289^1 * 292393^1" };
-            primeFactorsArr[14] = new string[] { "10025669898975", "3^1 * 5^2 * 17^1 * 35597^1 * 220897^1" };
-            primeFactorsArr[15] = new string[] { "7630001852319", "3^3 * 7^1 * 11^1 * 61^1 * 131^1 * 459271^1" };
-            primeFactorsArr[16] = new string[] { "9630702123487", "1175297^1 * 8194271^1" };
-            primeFactorsArr[17] = new string[] { "549004758852", "2^2 * 3^1 * 11^2 * 19^1 * 23^1 * 41^1 * 47^1 * 449^1" };
-            primeFactorsArr[18] = new string[] { "8871114770023", "11^1 * 227^1 * 35531^1 * 99989^1" };
-            primeFactorsArr[19] = new string[] { "1662583120447", "37^1 * 73^1 * 1327^1 * 463861^1" };
+            var maxDivsArr = new string[20][];
+            maxDivsArr[0] = new string[] { "0", "8", "2", "1 1 1 1 " };
+            maxDivsArr[1] = new string[] { "12", "30", "4", "7 5 7 11 13 9 " };
+            maxDivsArr[2] = new string[] { "20", "41", "8", "12 15 20 " };
+            maxDivsArr[3] = new string[] { "28", "48", "2", "1 1 1 1 1 1 " };
+            maxDivsArr[4] = new string[] { "72", "104", "12", "36 42 45 48 " };
+            maxDivsArr[5] = new string[] { "97", "100", "6", "49 33 " };
+            maxDivsArr[6] = new string[] { "112", "150", "10", "56 " };
+            maxDivsArr[7] = new string[] { "120", "130", "4", "61 41 25 43 " };
+            maxDivsArr[8] = new string[] { "301", "396", "16", "156 165 189 192 195 " };
+            maxDivsArr[9] = new string[] { "400", "455", "15", "200 " };
+            maxDivsArr[10] = new string[] { "1", "3", "5", "" };
+            maxDivsArr[11] = new string[] { "462", "520", "16", "231 255 260 " };
+            maxDivsArr[12] = new string[] { "501", "537", "4", "167 251 101 73 257 103 47 173 263 31 41 107 179 " };
+            maxDivsArr[13] = new string[] { "543", "600", "12", "272 275 279 282 286 290 195 " };
+            maxDivsArr[14] = new string[] { "600", "700", "24", "300 315 330 336 " };
+            maxDivsArr[15] = new string[] { "676", "696", "2", "1 1 1 " };
+            maxDivsArr[16] = new string[] { "710", "748", "8", "355 356 143 365 247 371 " };
+            maxDivsArr[17] = new string[] { "750", "800", "10", "376 " };
+            maxDivsArr[18] = new string[] { "801", "900", "20", "405 408 440 " };
+            maxDivsArr[19] = new string[] { "901", "1000", "24", "462 468 495 " };
 
-            foreach (var test in primeFactorsArr)
+            foreach (var test in maxDivsArr)
             {
-                initialNumber = test[0];
-                ansCorr = test[1];
-                ansLib = NumberLib.BigIntFactorization(BigInteger.Parse(initialNumber));
+                start = test[0];
+                end = test[1];
+                amountOfDividers = test[2];
+                ansCorr = test[3];
+                ansLib = NumberLib.Problem(int.Parse(start), int.Parse(end), int.Parse(amountOfDividers));
 
-                Console.WriteLine($"\nЗаданное число: {initialNumber}");
+                Console.WriteLine($"\nНачало интервала: {start}");
+                Console.WriteLine($"Конец интервала: {end}");
+                Console.WriteLine($"Заданное число делителей: {amountOfDividers}");
                 Console.WriteLine($"Ожидаемый результат: {ansCorr}");
                 Console.WriteLine($"Результат работы программы: {ansLib}");
-                count += Checking(ansLib, ansCorr);
+                count1 += Checking(ansLib, ansCorr);
             }
-            if (count == 20)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nВсе тесты завершены успешно.");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nОдин или несколько тестов были провалены.");
-                incorrectMethods += "Factorization\n";
-            }
-            Console.ResetColor();
+            Results("Problem\n", count1);
         }
 
         static void FullTest()
@@ -471,12 +403,12 @@ namespace Tests
             NODTest();
             NOKTest();
             BigIntFactorizationTest();
-
+            ProblemTest();
 
             if (incorrectMethods == "")
                 Console.WriteLine("\nВсе методы работают корректно.");
             else
-                Console.WriteLine("\nСледующие методы работают некорректно:\n" + incorrectMethods);
+                Console.WriteLine($"\n{count} тест(ов) были провалены.\nСледующие методы работают некорректно:\n" + incorrectMethods);
         }
         static int Checking(string s1, string s2)
         {
@@ -494,6 +426,22 @@ namespace Tests
                 Console.ResetColor();
                 return 0;
             }
+        }
+        static void Results(string method, int currCount)
+        {
+            if (currCount == 20)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nВсе тесты завершены успешно.");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n{20 - currCount} тест(ов) были провалены.");
+                count += 20 - currCount;
+                incorrectMethods += method;
+            }
+            Console.ResetColor();
         }
     }
 }

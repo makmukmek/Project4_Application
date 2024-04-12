@@ -254,7 +254,7 @@ namespace Library
         /// <param name="start">Начальная граница интервала</param>
         /// <param name="end">Конечная граница интервала</param>
         /// <param name="condition">Условие</param>
-        /// <returns>Строка делителй</returns>
+        /// <returns>Строка делителей</returns>
         public static string Problem(int start, int end, int condition) 
         {
             string line = "";
