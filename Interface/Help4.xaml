@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Найти НОД и НОК. Справка." Height="600" Width="800" Icon="/helpbutton_85772.png">
+        Title="Найти НОД и НОК. Справка." Height="843" Width="800" Icon="/helpbutton_85772.png">
     <Grid>
-        <Label Content="Найти НОД и НОК" Height="44" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
-        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,507,0,10" Width="204" FontSize="24" FontStyle="Italic"/>
-        <TextBlock TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="449" Width="701" FontStyle="Italic">
+        <Label Content="Найти НОД и НОК" Height="44" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10" Width="204" FontSize="28" FontStyle="Italic" Height="80" VerticalAlignment="Bottom"/>
+        <TextBlock TextWrapping="Wrap" FontSize="28" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="635" Width="700" FontStyle="Italic">
 Эта задача заключается в нахождении всех простых чисел в заданном диапазоне.
 Простые числа - это натуральные числа больше единицы, которые имеют только два делителя: 1 и само число.
 Для решения этой задачи обычно используется алгоритм, который проверяет каждое число в диапазоне на простоту.

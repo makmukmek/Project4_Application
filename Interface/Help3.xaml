@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Нахождение всех простых чисел в заданном диапазоне. Справка." Height="600" Width="800" Icon="/helpbutton_85772.png">
+        Title="Нахождение всех простых чисел в заданном диапазоне. Справка." Height="828" Width="800" Icon="/helpbutton_85772.png">
     <Grid >
-        <Label Content="Нахождение всех простых чисел в заданном диапазоне" Height="37" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
-        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,507,0,10" Width="204" FontSize="24" FontStyle="Italic"/>
-        <TextBlock TextWrapping="Wrap" FontSize="24" Margin="0,47,0,0" VerticalAlignment="Top" Height="455" FontStyle="Italic" HorizontalAlignment="Center" Width="712">
+        <Label Content="Нахождение всех простых чисел в заданном диапазоне" Height="52" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10" Width="204" FontSize="28" FontStyle="Italic" Height="80" VerticalAlignment="Bottom"/>
+        <TextBlock TextWrapping="Wrap" FontSize="28" Margin="38,57,0,0" VerticalAlignment="Top" Height="601" FontStyle="Italic" HorizontalAlignment="Left" Width="712">
 Эта задача заключается в нахождении всех простых чисел в заданном диапазоне.
 Простые числа - это натуральные числа больше единицы, которые имеют только два делителя: 1 и само число.
 Для решения этой задачи обычно используется алгоритм, который проверяет каждое число в диапазоне на простоту.

@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Нахождение всех простых чисел в заданном диапазоне." Height="450" Width="700" Icon="/free-icon-number-3-8068125.png">
+        Title="Нахождение всех простых чисел в заданном диапазоне." Height="480" Width="778" Icon="/free-icon-number-3-8068125.png">
     <Grid>
-        <Label Content="Нахождение всех простых чисел в заданном диапазоне" Height="47" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
-        <Label Content="Введите число:" Height="42" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="180"/>
-        <Label Content="Делители:" Height="42" Margin="50,125,0,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Left" FontStyle="Italic" Width="129"/>
-        <TextBox x:Name="NumberForPrimeDivisors" HorizontalAlignment="Left" Height="42" Margin="251,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" FontSize="24" FontStyle="Italic" BorderThickness="3,3,3,3"/>
-        <RichTextBox x:Name="ResPrimeDivisors" Margin="179,125,50,0" FontSize="24" FontStyle="Italic" Height="179" VerticalAlignment="Top" IsReadOnly="True" BorderThickness="3,3,3,3" VerticalScrollBarVisibility="Auto" />
-        <Button x:Name="RunPrimeDivisors" Content="Выполнить" Margin="0,0,50,29" FontSize="24" FontStyle="Italic" Click="RunPrimeDivisors_Click" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="176"/>
-        <Button x:Name="Clear" Content="Очистить" HorizontalAlignment="Left" Margin="50,0,0,29" Width="176" FontSize="24" FontStyle="Italic" Click="Clear_Click" Height="60" VerticalAlignment="Bottom"/>
+        <Label Content="Нахождение всех простых чисел в заданном диапазоне" Height="54" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Label Content="Введите число:" Height="42" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Left" FontStyle="Italic" Width="214"/>
+        <Label Content="Делители:" Height="49" Margin="50,125,0,0" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Left" FontStyle="Italic" Width="152"/>
+        <TextBox x:Name="NumberForPrimeDivisors" HorizontalAlignment="Left" Height="42" Margin="269,70,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" FontSize="30" FontStyle="Italic" BorderThickness="3,3,3,3"/>
+        <RichTextBox x:Name="ResPrimeDivisors" Margin="207,127,50,0" FontSize="30" FontStyle="Italic" Height="208" VerticalAlignment="Top" IsReadOnly="True" BorderThickness="3,3,3,3" VerticalScrollBarVisibility="Auto" />
+        <Button x:Name="RunPrimeDivisors" Content="Выполнить" Margin="0,0,50,29" FontSize="28" FontStyle="Italic" Click="RunPrimeDivisors_Click" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="176"/>
+        <Button x:Name="Clear" Content="Очистить" HorizontalAlignment="Left" Margin="50,0,0,29" Width="176" FontSize="28" FontStyle="Italic" Click="Clear_Click" Height="60" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

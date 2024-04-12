@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Задача на тему делителей. Справка." Height="409" Width="800" Icon="/helpbutton_85772.png">
+        Title="Задача на тему делителей. Справка." Height="545" Width="800" Icon="/helpbutton_85772.png">
     <Grid >
-        <Label Content="Задача на тему делителей" Height="41" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <Label Content="Задача на тему делителей" Height="54" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
 
-        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10" Width="204" FontSize="24" FontStyle="Italic" Height="62" VerticalAlignment="Bottom"/>
-        <TextBlock TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="272" Width="688" FontStyle="Italic"><Run Text="В заданном интервале [start, end] найти все числа, у которых количество делителей равно заданному числу (condition).Вывести по одному максимальному делителю для каждого из найденных чисел, не считая его самого. Переменная start содержит начало интервала, а переменная end - конец интервала, condition - число-условие, которому должно равняться количество делителей числа из интервала."/></TextBlock>
+        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,0,0,10" Width="204" FontSize="28" FontStyle="Italic" Height="62" VerticalAlignment="Bottom"/>
+        <TextBlock TextWrapping="Wrap" FontSize="28" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" Height="339" Width="688" FontStyle="Italic"><Run Text="В заданном интервале [start, end] найти все числа, у которых количество делителей равно заданному числу (condition).Вывести по одному максимальному делителю для каждого из найденных чисел, не считая его самого. Переменная start содержит начало интервала, а переменная end - конец интервала, condition - число-условие, которому должно равняться количество делителей числа из интервала."/></TextBlock>
 
     </Grid>
 </Window>

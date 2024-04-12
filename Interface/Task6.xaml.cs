@@ -31,9 +31,13 @@ namespace Interface
             int number;
             try
             {
-                if (int.TryParse(StartNumber.Text, out number) == false || int.TryParse(EndNumber.Text, out number) == false || int.TryParse(NumberOfDivisors.Text, out number) == false || int.Parse(StartNumber.Text) <= 0  || int.Parse(EndNumber.Text) <= 0 || int.Parse(NumberOfDivisors.Text) <= 0)
+                if (int.TryParse(StartNumber.Text, out number) == false || int.TryParse(EndNumber.Text, out number) == false || int.TryParse(NumberOfDivisors.Text, out number) == false || int.Parse(StartNumber.Text) <= 0  || int.Parse(EndNumber.Text) <= 0)
                 {
                     throw new Exception("Введите целое пложительное число. Пример ввода: 3 32 125");
+                }
+                if (int.Parse(NumberOfDivisors.Text) <= 1)
+                {
+                    throw new Exception("Количество делителей долждно быть целым положительным числом большим 1. Пример ввода: 3 32 125");
                 }
                 ResProblem.AppendText(NumberLib.Problem(int.Parse(StartNumber.Text), int.Parse(EndNumber.Text), int.Parse(NumberOfDivisors.Text)));
             }
@@ -53,5 +57,7 @@ namespace Interface
             NumberOfDivisors.Text = string.Empty;
             ResProblem.Document.Blocks.Clear();
         }
+
+        
     }
 }

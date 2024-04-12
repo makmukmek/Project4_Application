@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interface"
         mc:Ignorable="d"
-        Title="Факторизация. Справка" Height="550" Width="800" Icon="/helpbutton_85772.png">
+        Title="Факторизация. Справка" Height="730" Width="800" Icon="/helpbutton_85772.png">
     <Grid>
 
-        <Label Content="Факторизация" Height="41" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Center" FontStyle="Italic"/>
-        <TextBlock TextWrapping="Wrap" FontSize="24" Margin="48,56,48,0" VerticalAlignment="Top" Height="387" FontStyle="Italic">
+        <Label Content="Факторизация" Height="51" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
+        <TextBlock TextWrapping="Wrap" FontSize="28" Margin="48,56,48,0" VerticalAlignment="Top" Height="485" FontStyle="Italic">
     Факторизация числа - это процесс нахождения всех простых множителей, на которые заданное число делится без остатка.
     Она является важной операцией в математике и алгоритмике для решения различных задач.
     Процесс факторизации включает в себя пошаговое деление заданного числа на все простые числа,
@@ -19,7 +19,7 @@
     на которые делится заданное число.
         </TextBlock>
 
-        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,448,0,10" Width="204" FontSize="24" FontStyle="Italic"/>
+        <Button Content="Закрыть" Click="CloseButton_Click" HorizontalAlignment="Center" Margin="0,0,0,24" Width="204" FontSize="28" FontStyle="Italic" Height="80" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>
