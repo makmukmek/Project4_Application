@@ -362,7 +362,7 @@ namespace Tests
             maxDivsArr[7] = new string[] { "120", "130", "4", "61 41 25 43 " };
             maxDivsArr[8] = new string[] { "301", "396", "16", "156 165 189 192 195 " };
             maxDivsArr[9] = new string[] { "400", "455", "15", "200 " };
-            maxDivsArr[10] = new string[] { "1", "3", "5", "" };
+            maxDivsArr[10] = new string[] { "1", "3", "5", "Таких чисел нет" };
             maxDivsArr[11] = new string[] { "462", "520", "16", "231 255 260 " };
             maxDivsArr[12] = new string[] { "501", "537", "4", "167 251 101 73 257 103 47 173 263 31 41 107 179 " };
             maxDivsArr[13] = new string[] { "543", "600", "12", "272 275 279 282 286 290 195 " };
