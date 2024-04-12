@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Задача на тему делителей." Height="620" Width="700" Icon="/free-icon-number-6-8068286.png">
     <Grid>
-        <Label Content="Задача на тему делителей" Height="53" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center"/>
+        <Label Content="Задача на тему делителей" Height="53" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Center" FontStyle="Italic"/>
         <Label Content="Введите начало интервала:" Height="52" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Left" FontStyle="Italic" Width="380"/>
         <Label Content="Делители:" Height="52" Margin="50,251,0,0" VerticalAlignment="Top" FontSize="28" HorizontalAlignment="Left" FontStyle="Italic" Width="154"/>
         <TextBox x:Name="StartNumber" HorizontalAlignment="Left" Height="42" Margin="430,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" FontSize="30" FontStyle="Italic" BorderThickness="3,3,3,3"/>
